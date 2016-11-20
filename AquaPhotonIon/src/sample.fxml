@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyController">
+   <top>
+      <MenuBar fx:id="box" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <Menu mnemonicParsing="false" text="Port">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Available COM">
+                           <graphic>
+                              <ChoiceBox fx:id="choiceBox" onDragDetected="#selectedPort" onMouseClicked="#selectedPort" prefWidth="150.0" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#startConnection" text="Connect" />
+                  <MenuItem mnemonicParsing="false" onAction="#startController" text="StartXboxController" fx:id="xbox" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClose" text="close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
